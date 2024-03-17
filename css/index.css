@@ -87,7 +87,7 @@ button {
   transition: 0.3s;
 }
 
-.list_item__img:hover {
+.list_item__img:hover() {
   width: 105%;
   height: 105%;
   filter: brightness(0.5);
