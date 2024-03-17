@@ -186,6 +186,16 @@ button {
   .list_item {
     width: 47%;
   }
+
+  .list_item__img.active {
+    width: 105%;
+    height: 105%;
+    filter: brightness(0.5);
+  }
+
+  .list_item__title:active {
+    opacity: 1;
+  }
 }
 
 @media(max-width: 530px) {
@@ -207,15 +217,5 @@ button {
 
   .footer_title {
     font-size: 22px;
-  }
-
-  .list_item__img:active {
-    width: 105%;
-    height: 105%;
-    filter: brightness(0.5);
-  }
-
-  .list_item__img:active + .list_item__title, .list_item__title:active {
-    opacity: 1;
   }
 }

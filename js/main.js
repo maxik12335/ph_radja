@@ -1,15 +1,15 @@
-const modal = document.querySelector('.modal');
-modal.querySelector('.close').addEventListener('click', () => {
-  modal.classList.remove('show');
-  document.body.style.overflow = '';
-})
-
+const titles = document.querySelectorAll('.list_item__title');
 const images = document.querySelectorAll('.list_item__img');
-images.forEach(img => {
-  img.addEventListener('click', (event) => {
-    let src = event.target.getAttribute('src');
-    modal.querySelector('img').setAttribute('src', src);
-    modal.classList.add('show');
-    document.body.style.overflow = 'hidden'
+images.forEach((img, index) => {
+  img.addEventListener('touchstart', (event) => {
+    images.forEach(img => {
+      if(img.classList.contains('active') && titles[index].classList.contains('active')) {
+        img.classList.remove('active')
+        titles[index].classList.remove('active')
+      }
+    })
+
+    img.classList.add('active');
+    titles[index].classList.add('active')
   })
 })
