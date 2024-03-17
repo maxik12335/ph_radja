@@ -87,7 +87,7 @@ button {
   transition: 0.3s;
 }
 
-.list_item__img:hover() {
+.list_item__img:hover {
   width: 105%;
   height: 105%;
   filter: brightness(0.5);
@@ -207,5 +207,15 @@ button {
 
   .footer_title {
     font-size: 22px;
+  }
+
+  .list_item__img:active {
+    width: 105%;
+    height: 105%;
+    filter: brightness(0.5);
+  }
+
+  .list_item__img:active + .list_item__title, .list_item__title:active {
+    opacity: 1;
   }
 }
