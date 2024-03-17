@@ -15,7 +15,7 @@ images.forEach((img, index) => {
 })
 
 images.forEach((img, index) => {
-  img.addEventListener('touchmove', (event) => {
+  img.addEventListener('touchend', (event) => {
     images.forEach(img => {
       if(img.classList.contains('active') && titles[index].classList.contains('active')) {
         img.classList.remove('active')
