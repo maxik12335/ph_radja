@@ -13,17 +13,3 @@ images.forEach((img, index) => {
     titles[index].classList.add('active')
   })
 })
-
-images.forEach((img, index) => {
-  img.addEventListener('touchend', (event) => {
-    images.forEach(img => {
-      if(img.classList.contains('active') && titles[index].classList.contains('active')) {
-        img.classList.remove('active')
-        titles[index].classList.remove('active')
-      }
-    })
-
-    img.classList.add('active');
-    titles[index].classList.add('active')
-  })
-})
